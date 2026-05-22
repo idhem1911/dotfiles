@@ -79,6 +79,7 @@ rofi
 slurp
 sudo
 swayosd-git
+syncthing
 telegram-desktop
 thunar
 thunar-volman
