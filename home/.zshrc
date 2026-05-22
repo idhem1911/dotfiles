@@ -257,3 +257,5 @@ vid2gif() {
 
     echo "Done: $output"
 }
+
+alias dotsync='~/.dotfiles/sync.sh'

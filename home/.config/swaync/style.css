@@ -1,0 +1,148 @@
+/* =========================================
+   [GLOBAL] Variables & Base Settings
+   ========================================= */
+@define-color cc-bg rgba(17, 17, 27, 0.85); /* Mocha Crust + Alpha */
+@define-color noti-bg rgba(30, 30, 46, 0.8); /* Mocha Base + Alpha */
+@define-color noti-bg-hover rgba(49, 50, 68, 0.9); /* Mocha Surface0 */
+@define-color noti-border rgba(255, 255, 255, 0.1);
+@define-color text #cdd6f4;
+@define-color text-muted #a6adc8;
+@define-color accent #89b4fa; /* Mocha Blue */
+@define-color urgent #f38ba8; /* Mocha Red */
+
+* {
+  font-family: "JetBrainsMono Nerd Font", "Noto Color Emoji";
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+/* =========================================
+   [CONTROL CENTER] Main Panel
+   ========================================= */
+.control-center {
+  background-color: @cc-bg;
+  border: 1px solid @noti-border;
+  border-radius: 5px; /* Matches Hyprland rounding */
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+/* =========================================
+   [WIDGETS] Title & DND
+   ========================================= */
+.widget-title {
+  color: @text;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.widget-title > button {
+  background-color: transparent;
+  color: @urgent;
+  border-radius: 5px;
+  padding: 2px 8px;
+}
+
+.widget-title > button:hover {
+  background-color: @noti-bg-hover;
+}
+
+.widget-dnd {
+  color: @text-muted;
+  margin-bottom: 10px;
+}
+
+.widget-dnd > switch {
+  background-color: @noti-bg-hover;
+  border-radius: 12px;
+  padding: 2px;
+}
+
+.widget-dnd > switch:checked {
+  background-color: @accent;
+}
+
+.widget-dnd > switch slider {
+  background-color: @text;
+  border-radius: 10px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+/* =========================================
+   [NOTIFICATIONS] Popups & List Items
+   ========================================= */
+.notification-row {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.notification {
+  background-color: @noti-bg;
+  border: 1px solid @noti-border;
+  border-radius: 5px;
+  margin: 4px 0;
+  padding: 0;
+}
+
+.notification:hover {
+  background-color: @noti-bg-hover;
+}
+
+.notification-default-action,
+.notification-action {
+  background: transparent;
+  color: @text;
+  padding: 8px;
+}
+
+.notification-content {
+  padding: 8px;
+}
+
+.summary {
+  color: @text;
+  font-weight: bold;
+}
+
+.body {
+  color: @text-muted;
+  font-weight: normal;
+}
+
+.time {
+  color: @text-muted;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+/* =========================================
+   [CLOSE BUTTON]
+   ========================================= */
+.close-button {
+  background-color: transparent;
+  color: @text-muted;
+  border-radius: 5px;
+  min-width: 20px;
+  min-height: 20px;
+  margin: 4px;
+}
+
+.close-button:hover {
+  background-color: @urgent;
+  color: @cc-bg;
+}
+
+/* =========================================
+   [CRITICAL NOTIFICATIONS]
+   ========================================= */
+.notification.critical {
+  border: 1px solid @urgent;
+}
