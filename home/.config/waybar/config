@@ -1,0 +1,76 @@
+{
+    // [LAYOUT] Bar position and layer
+    "layer": "top",
+    "position": "top",
+    "spacing": 0,
+
+    // [MODULES] Alignment
+    "modules-left": ["hyprland/workspaces"], // ["hyprland/workspaces"],
+    "modules-center": [], // [FIX] Removed "hyprland/window"
+    "modules-right": [
+        "network",
+        "custom/gpu-usage", // [ADD] GPU usage placed next to CPU/RAM
+        "cpu",
+        "memory",
+        "custom/amd-gpu",   // [KEEP] Dedicated to temperatures
+        "pulseaudio",
+        "clock",
+        "tray"
+    ],
+
+    // [WORKSPACES] Clean numbers, no dots/squares
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1", "2": "2", "3": "3", "4": "4", "5": "5",
+            "6": "6", "7": "7", "8": "8", "9": "9", "10": "10"
+        },
+        "persistent-workspaces": { "*": 5 } // [OPTION] Always show 5 workspaces
+    },
+
+    // [CLOCK] Calendar icon + Date + Time
+    "clock": {
+        "format": "󰃭 {:%Y %b %d (%a) %H:%M:%S}", // [OPTION] Main format
+        "format-alt": "󰥔 {:%H:%M:%S}",           // [OPTION] Click format
+        "interval": 1
+    },
+
+    // [NETWORK]
+    "network": {
+        "format": "󰤭 Off",
+        "format-wifi": "󰤨 {essid} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+        "format-ethernet": "󰈀 ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+        "interval": 1
+    },
+
+    // [HARDWARE] CPU & RAM
+    "cpu": {
+        "format": "󰍛 C {usage}%",
+        "interval": 1
+    },
+    "memory": {
+        "format": "󰻠 R {percentage}%", // [FIX] Changed {usage} to {percentage}
+        "interval": 1
+    },
+
+    // [HARDWARE] GPU Usage (Custom)
+    "custom/gpu-usage": {
+        "exec": "~/.config/waybar/scripts/gpu-usage.sh",
+        "format": "{}",
+        "interval": 1
+    },
+
+    // [TEMPS] GPU & CPU Temperatures (Custom)
+    "custom/amd-gpu": {
+        "exec": "~/.config/waybar/scripts/amd-gpu.sh",
+        "format": "{}",
+        "interval": 1
+    },
+
+    // [AUDIO]
+    "pulseaudio": {
+        "format": " {volume}%",
+        "format-muted": "󰝟 Muted",
+        "on-click": "pavucontrol" // [OPTION] Left click action
+    }
+}
