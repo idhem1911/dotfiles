@@ -1,148 +1,156 @@
 /* =========================================
    [GLOBAL] Variables & Base Settings
+   Change the hex/rgba values here to retheme everything instantly.
    ========================================= */
-@define-color cc-bg rgba(17, 17, 27, 0.85); /* Mocha Crust + Alpha */
-@define-color noti-bg rgba(30, 30, 46, 0.8); /* Mocha Base + Alpha */
-@define-color noti-bg-hover rgba(49, 50, 68, 0.9); /* Mocha Surface0 */
-@define-color noti-border rgba(255, 255, 255, 0.1);
-@define-color text #cdd6f4;
-@define-color text-muted #a6adc8;
-@define-color accent #89b4fa; /* Mocha Blue */
-@define-color urgent #f38ba8; /* Mocha Red */
+@define-color cc-bg rgba(17, 17, 27, 0.85); /* Control Center background */
+@define-color noti-bg rgba(30, 30, 46, 0.8); /* Individual notification background */
+@define-color noti-bg-hover rgba(49, 50, 68, 0.9); /* Hover state background */
+@define-color noti-border rgba(255, 255, 255, 0.1); /* Subtle border color */
+@define-color text #cdd6f4; /* Primary text color */
+@define-color text-muted #a6adc8; /* Secondary/time text color */
+@define-color accent #89b4fa; /* Accent color (Active switches) */
+@define-color urgent #f38ba8; /* Critical notification/Clear button color */
 
+/* [BASE] Applies to all elements. Do not change the selectors. */
 * {
-  font-family: "JetBrainsMono Nerd Font", "Noto Color Emoji";
-  font-size: 12px;
-  font-weight: bold;
-  border: none;
-  outline: none;
+    font-family:
+        "JetBrainsMono Nerd Font", "Noto Color Emoji"; /* Change font here */
+    font-size: 12px; /* Global font size */
+    font-weight: bold; /* Global font weight */
+    border: none; /* Removes default GTK borders */
+    outline: none; /* Removes focus rings */
 }
 
 /* =========================================
    [CONTROL CENTER] Main Panel
+   The slide-out sidebar.
    ========================================= */
 .control-center {
-  background-color: @cc-bg;
-  border: 1px solid @noti-border;
-  border-radius: 5px; /* Matches Hyprland rounding */
-  padding: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    background-color: @cc-bg;
+    border: 1px solid @noti-border;
+    border-radius: 5px; /* MATCH THIS to your Hyprland 'rounding' value */
+    padding: 10px; /* Inner spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Drop shadow */
 }
 
 .control-center-list {
-  background: transparent;
+    background: transparent; /* Keeps the list area clean */
 }
 
 /* =========================================
-   [WIDGETS] Title & DND
+   [WIDGETS] Title & DND Switch
    ========================================= */
 .widget-title {
-  color: @text;
-  font-size: 14px;
-  margin: 5px 0;
+    color: @text;
+    font-size: 14px; /* Slightly larger than base */
+    margin: 5px 0;
 }
 
+/* The "Clear" button */
 .widget-title > button {
-  background-color: transparent;
-  color: @urgent;
-  border-radius: 5px;
-  padding: 2px 8px;
+    background-color: transparent;
+    color: @urgent; /* Uses the red/urgent color */
+    border-radius: 5px;
+    padding: 2px 8px;
 }
 
 .widget-title > button:hover {
-  background-color: @noti-bg-hover;
+    background-color: @noti-bg-hover;
 }
 
+/* Do Not Disturb text and switch */
 .widget-dnd {
-  color: @text-muted;
-  margin-bottom: 10px;
+    color: @text-muted;
+    margin-bottom: 10px;
 }
 
 .widget-dnd > switch {
-  background-color: @noti-bg-hover;
-  border-radius: 12px;
-  padding: 2px;
+    background-color: @noti-bg-hover; /* Off state color */
+    border-radius: 12px;
+    padding: 2px;
 }
 
 .widget-dnd > switch:checked {
-  background-color: @accent;
+    background-color: @accent; /* On state color */
 }
 
 .widget-dnd > switch slider {
-  background-color: @text;
-  border-radius: 10px;
-  min-width: 20px;
-  min-height: 20px;
+    background-color: @text; /* The actual sliding knob */
+    border-radius: 10px;
+    min-width: 20px;
+    min-height: 20px;
 }
 
 /* =========================================
    [NOTIFICATIONS] Popups & List Items
    ========================================= */
 .notification-row {
-  background: transparent;
-  margin: 0;
-  padding: 0;
+    background: transparent;
+    margin: 0;
+    padding: 0;
 }
 
 .notification {
-  background-color: @noti-bg;
-  border: 1px solid @noti-border;
-  border-radius: 5px;
-  margin: 4px 0;
-  padding: 0;
+    background-color: @noti-bg;
+    border: 1px solid @noti-border;
+    border-radius: 5px; /* MATCH THIS to your Hyprland 'rounding' value */
+    margin: 4px 0; /* Space between stacked notifications */
+    padding: 0;
 }
 
 .notification:hover {
-  background-color: @noti-bg-hover;
+    background-color: @noti-bg-hover;
 }
 
+/* Clickable areas inside the notification */
 .notification-default-action,
 .notification-action {
-  background: transparent;
-  color: @text;
-  padding: 8px;
+    background: transparent;
+    color: @text;
+    padding: 8px;
 }
 
 .notification-content {
-  padding: 8px;
+    padding: 8px; /* Inner padding for text/icons */
 }
 
 .summary {
-  color: @text;
-  font-weight: bold;
+    color: @text;
+    font-weight: bold; /* App name / Title */
 }
 
 .body {
-  color: @text-muted;
-  font-weight: normal;
+    color: @text-muted;
+    font-weight: normal; /* Message body */
 }
 
 .time {
-  color: @text-muted;
-  font-size: 10px;
-  font-weight: normal;
+    color: @text-muted;
+    font-size: 10px; /* Smaller text for timestamp */
+    font-weight: normal;
 }
 
 /* =========================================
-   [CLOSE BUTTON]
+   [CLOSE BUTTON] The 'X' on hover
    ========================================= */
 .close-button {
-  background-color: transparent;
-  color: @text-muted;
-  border-radius: 5px;
-  min-width: 20px;
-  min-height: 20px;
-  margin: 4px;
+    background-color: transparent;
+    color: @text-muted;
+    border-radius: 5px;
+    min-width: 20px;
+    min-height: 20px;
+    margin: 4px;
 }
 
 .close-button:hover {
-  background-color: @urgent;
-  color: @cc-bg;
+    background-color: @urgent; /* Turns red on hover */
+    color: @cc-bg;
 }
 
 /* =========================================
    [CRITICAL NOTIFICATIONS]
+   Triggered by `notify-send -u critical`
    ========================================= */
 .notification.critical {
-  border: 1px solid @urgent;
+    border: 1px solid @urgent; /* Red border for urgent alerts */
 }
