@@ -69,6 +69,7 @@ network-manager-applet
 networkmanager
 nodejs
 noto-fonts
+noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 npm
