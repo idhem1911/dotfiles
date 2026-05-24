@@ -18,6 +18,8 @@ chaotic-mirrorlist
 checkupdates-systemd-git
 cliphist
 corectrl
+ddcutil
+dkms
 efibootmgr
 exfatprogs
 fastfetch
@@ -39,6 +41,7 @@ hyprland
 hyprlock
 hyprpicker
 hyprpolkitagent
+i2c-tools
 imagemagick
 imv
 kitty
@@ -49,6 +52,7 @@ libpulse
 linux-firmware
 linux-lts
 linux-zen
+linux-zen-headers
 mako
 mesa-utils
 mpv

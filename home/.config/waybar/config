@@ -13,6 +13,7 @@
         "cpu",
         "memory",
         "custom/amd-gpu",   // [KEEP] Dedicated to temperatures
+        "custom/brightness",
         "pulseaudio",
         "clock",
         "tray"
@@ -72,5 +73,14 @@
         "format": " {volume}%",
         "format-muted": "󰝟 Muted",
         "on-click": "pavucontrol" // [OPTION] Left click action
+    },
+
+    // [BRIGHTNESS] External Monitor Control
+    "custom/brightness": {
+    "exec": "~/.config/waybar/scripts/brightness.sh",
+    "on-scroll-up": "~/.config/waybar/scripts/brightness.sh up",
+    "on-scroll-down": "~/.config/waybar/scripts/brightness.sh down",
+    "interval": 1,
+    "format": "{}"
     }
 }

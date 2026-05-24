@@ -25,6 +25,7 @@ window#waybar {
 #memory,
 #custom-gpu-usage,
 #custom-amd-gpu,
+#custom-brightness,
 #pulseaudio,
 #tray {
     /* [SPACING] Tight padding for a compact look */
@@ -108,4 +109,10 @@ window#waybar {
 /* [COLOR] Audio - Sapphire */
 #pulseaudio {
     color: #74c7ec;
+}
+
+/* [COLOR] Brightness - Peach */
+#custom-brightness {
+    color: #fab387;
+    font-weight: bold;
 }
