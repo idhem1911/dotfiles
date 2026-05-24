@@ -259,3 +259,5 @@ vid2gif() {
 }
 
 alias dotsync='~/.dotfiles/sync.sh'
+
+alias sys='~/sysConfigs_dump.sh'

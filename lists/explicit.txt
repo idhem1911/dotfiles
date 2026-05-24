@@ -2,7 +2,6 @@
 amd-ucode
 android-tools
 android-udev
-arandr
 awww
 blueman
 bluez
@@ -59,11 +58,8 @@ linux-firmware
 linux-lts
 linux-zen
 linux-zen-headers
-mako
 mesa-utils
 mpv
-mpvpaper
-nano
 neovim
 network-manager-applet
 networkmanager
