@@ -78,11 +78,11 @@
 
     // [BRIGHTNESS] External Monitor Control
     "custom/brightness": {
-    "exec": "~/.config/waybar/scripts/brightness.sh",
-    "on-scroll-up": "~/.config/waybar/scripts/brightness.sh up",
-    "on-scroll-down": "~/.config/waybar/scripts/brightness.sh down",
-    "interval": 1,
-    "format": "{}"
+        "exec": "~/.config/waybar/scripts/brightness.sh",
+        "on-scroll-up": "~/.config/waybar/scripts/brightness.sh up",
+        "on-scroll-down": "~/.config/waybar/scripts/brightness.sh down",
+        "interval": 3,
+        "format": "{}"
     },
 
     // [WARMTH] Screen Temperature Control
