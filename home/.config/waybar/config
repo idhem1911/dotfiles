@@ -14,6 +14,7 @@
         "memory",
         "custom/amd-gpu",   // [KEEP] Dedicated to temperatures
         "custom/brightness",
+        "custom/warmth",
         "pulseaudio",
         "clock",
         "tray"
@@ -82,5 +83,15 @@
     "on-scroll-down": "~/.config/waybar/scripts/brightness.sh down",
     "interval": 1,
     "format": "{}"
+    },
+
+    // [WARMTH] Screen Temperature Control
+    "custom/warmth": {
+        "exec": "~/.config/waybar/scripts/warmth.sh",
+        "on-scroll-up": "~/.config/waybar/scripts/warmth.sh up",
+        "on-scroll-down": "~/.config/waybar/scripts/warmth.sh down",
+        "on-click": "~/.config/waybar/scripts/warmth.sh reset", // Left-click resets to 6500K
+        "interval": 5,
+        "format": "{}"
     }
 }

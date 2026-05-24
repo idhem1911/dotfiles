@@ -28,6 +28,7 @@ file-roller
 flatpak
 flatseal
 fzf
+gammastep
 gimp
 git
 gnome-keyring

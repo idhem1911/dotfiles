@@ -26,6 +26,7 @@ window#waybar {
 #custom-gpu-usage,
 #custom-amd-gpu,
 #custom-brightness,
+#custom-warmth,
 #pulseaudio,
 #tray {
     /* [SPACING] Tight padding for a compact look */
@@ -114,5 +115,11 @@ window#waybar {
 /* [COLOR] Brightness - Peach */
 #custom-brightness {
     color: #fab387;
+    font-weight: bold;
+}
+
+/* [COLOR] Warmth - Flamingo/Pinkish Orange */
+#custom-warmth {
+    color: #f38ba8;
     font-weight: bold;
 }
