@@ -9,7 +9,6 @@ bluez
 bluez-utils
 brave-bin
 brightnessctl
-btop
 btrfs-progs
 catppuccin-cursors-mocha
 catppuccin-gtk-theme-mocha
@@ -40,6 +39,7 @@ gvfs
 gvfs-mtp
 gvfs-nfs
 gvfs-smb
+htop
 hypridle
 hyprland
 hyprlock
