@@ -1,0 +1,16 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": "arch",
+  "modules": [
+    "os",
+    "host",
+    "kernel",
+    "cpu",
+    "gpu",
+    "memory",
+    "disk",
+    "display",
+    "de",
+    "wm"
+  ]
+}
