@@ -24,6 +24,7 @@ efibootmgr
 exfatprogs
 fastfetch
 fd
+ffmpegthumbnailer
 file-roller
 flatpak
 flatseal
@@ -37,6 +38,8 @@ grimblast-git
 gst-plugin-pipewire
 gvfs
 gvfs-mtp
+gvfs-nfs
+gvfs-smb
 hypridle
 hyprland
 hyprlock
