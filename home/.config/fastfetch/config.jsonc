@@ -1,16 +1,382 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-  "logo": "arch",
+  "logo": {
+    "type": "auto",
+    "padding": {
+      "top": 2,
+      "left": 3
+    }
+  },
+  "display": {
+    "separator": " 󰁔 ",
+    "color": {
+      "keys": "cyan",
+      "title": "blue"
+    }
+  },
   "modules": [
-    "os",
-    "host",
-    "kernel",
-    "cpu",
-    "gpu",
-    "memory",
-    "disk",
-    "display",
-    "de",
-    "wm"
+    "break",
+    {
+      "type": "custom",
+      "format": "┌──────────────────────── SYSTEM CORE ────────────────────────┐"
+    },
+    "break",
+    {
+      "type": "title",
+      "key": "  USER/HOST"
+    },
+    {
+      "type": "os",
+      "key": "  OS"
+    },
+    {
+      "type": "host",
+      "key": " 󰌢 HOST"
+    },
+    {
+      "type": "kernel",
+      "key": " 󰒋 KERNEL"
+    },
+    {
+      "type": "uptime",
+      "key": " 󰔚 UPTIME"
+    },
+    {
+      "type": "bios",
+      "key": " 󰟯 BIOS"
+    },
+    {
+      "type": "bootmgr",
+      "key": " 󰑓 BOOTMGR"
+    },
+    {
+      "type": "board",
+      "key": " 󰜮 BOARD"
+    },
+    {
+      "type": "chassis",
+      "key": " 󰪫 CHASSIS"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "├────────────────────── PROCESSING & MEMORY ──────────────────┤"
+    },
+    "break",
+    {
+      "type": "cpu",
+      "key": " 󰻠 CPU"
+    },
+    {
+      "type": "cpucache",
+      "key": " 󰅡 CPU CACHE"
+    },
+    {
+      "type": "cpuusage",
+      "key": " 󰍛 CPU USAGE"
+    },
+    {
+      "type": "memory",
+      "key": " 󰍛 MEMORY"
+    },
+    {
+      "type": "physicalmemory",
+      "key": " 󰑭 PHYSICAL RAM"
+    },
+    {
+      "type": "swap",
+      "key": " 󰓡 SWAP"
+    },
+    {
+      "type": "loadavg",
+      "key": " 󰊚 LOAD AVG"
+    },
+    {
+      "type": "processes",
+      "key": " 󰘔 PROCESSES"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "├─────────────────────── GRAPHICS & DISPLAY ────────────────┤"
+    },
+    "break",
+    {
+      "type": "gpu",
+      "key": " 󰢮 GPU"
+    },
+    {
+      "type": "opengl",
+      "key": " 󰹯 OpenGL"
+    },
+    {
+      "type": "opencl",
+      "key": " 󰹯 OpenCL"
+    },
+    {
+      "type": "vulkan",
+      "key": " 󰹯 Vulkan"
+    },
+    {
+      "type": "display",
+      "key": " 󰍹 DISPLAY"
+    },
+    {
+      "type": "monitor",
+      "key": " 󰍹 MONITOR"
+    },
+    {
+      "type": "brightness",
+      "key": " 󰃠 BRIGHTNESS"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "├────────────────────────── STORAGE ────────────────────────┤"
+    },
+    "break",
+    {
+      "type": "disk",
+      "key": " 󰋊 DISK"
+    },
+    {
+      "type": "physicaldisk",
+      "key": " 󰋊 PHYSICAL DISK"
+    },
+    {
+      "type": "diskio",
+      "key": " 󰋊 DISK I/O"
+    },
+    {
+      "type": "btrfs",
+      "key": " 󰋊 BTRFS"
+    },
+    {
+      "type": "zpool",
+      "key": " 󰋊 ZFS POOLS"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "├────────────────────────── NETWORK ────────────────────────┤"
+    },
+    "break",
+    {
+      "type": "localip",
+      "key": " 󰩠 LOCAL IP"
+    },
+    {
+      "type": "publicip",
+      "key": " 󰩠 PUBLIC IP"
+    },
+    {
+      "type": "netio",
+      "key": " 󰀂 NET I/O"
+    },
+    {
+      "type": "dns",
+      "key": " 󰩠 DNS"
+    },
+    {
+      "type": "wifi",
+      "key": " 󰖩 WIFI"
+    },
+    {
+      "type": "bluetooth",
+      "key": " 󰂯 BLUETOOTH DEVS"
+    },
+    {
+      "type": "bluetoothradio",
+      "key": " 󰂯 BT RADIOS"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "├──────────────────── DESKTOP ENVIRONMENT ──────────────────┤"
+    },
+    "break",
+    {
+      "type": "de",
+      "key": " 󰖯 DE"
+    },
+    {
+      "type": "wm",
+      "key": " 󰖯 WM"
+    },
+    {
+      "type": "wmtheme",
+      "key": " 󰖯 WM THEME"
+    },
+    {
+      "type": "theme",
+      "key": " 󰔎 THEME"
+    },
+    {
+      "type": "icons",
+      "key": " 󰀻 ICONS"
+    },
+    {
+      "type": "font",
+      "key": " 󰛖 FONTS"
+    },
+    {
+      "type": "terminal",
+      "key": " 󰆍 TERMINAL"
+    },
+    {
+      "type": "terminalfont",
+      "key": " 󰛖 TERM FONT"
+    },
+    {
+      "type": "terminalsize",
+      "key": " 󰆍 TERM SIZE"
+    },
+    {
+      "type": "terminaltheme",
+      "key": " 󰆍 TERM THEME"
+    },
+    {
+      "type": "shell",
+      "key": " 󰆍 SHELL"
+    },
+    {
+      "type": "editor",
+      "key": " 󰨞 EDITOR"
+    },
+    {
+      "type": "locale",
+      "key": " 󰗊 LOCALE"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "├──────────────────────── PERIPHERALS ──────────────────────┤"
+    },
+    "break",
+    {
+      "type": "keyboard",
+      "key": " 󰌌 KEYBOARDS"
+    },
+    {
+      "type": "mouse",
+      "key": " 󰍽 MICE"
+    },
+    {
+      "type": "cursor",
+      "key": " 󰇀 CURSOR"
+    },
+    {
+      "type": "gamepad",
+      "key": " 󰖺 GAMEPADS"
+    },
+    {
+      "type": "camera",
+      "key": " 󰄀 CAMERAS"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "├────────────────────── AUDIO & MEDIA ────────────────────────┤"
+    },
+    "break",
+    {
+      "type": "sound",
+      "key": " 󰕾 SOUND"
+    },
+    {
+      "type": "media",
+      "key": " 󰝚 MEDIA"
+    },
+    {
+      "type": "player",
+      "key": " 󰎆 PLAYER"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "├────────────────────────── POWER ──────────────────────────┤"
+    },
+    "break",
+    {
+      "type": "battery",
+      "key": " 󰁹 BATTERY"
+    },
+    {
+      "type": "poweradapter",
+      "key": " 󰚥 POWER ADAPTER"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "├────────────────────── SYSTEM SERVICES ────────────────────┤"
+    },
+    "break",
+    {
+      "type": "initsystem",
+      "key": " 󰈏 INIT SYSTEM"
+    },
+    {
+      "type": "lm",
+      "key": " 󰌻 LOGIN MANAGER"
+    },
+    {
+      "type": "tpm",
+      "key": " 󰿠 TPM"
+    },
+    {
+      "type": "users",
+      "key": " 󰀄 USERS"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "├──────────────────────── MISCELLANEOUS ────────────────────┤"
+    },
+    "break",
+    {
+      "type": "weather",
+      "key": " 󰖙 WEATHER"
+    },
+    {
+      "type": "wallpaper",
+      "key": " 󰸉 WALLPAPER"
+    },
+    {
+      "type": "packages",
+      "key": " 󰏖 PACKAGES"
+    },
+    {
+      "type": "version",
+      "key": " 󰫐 FASTFETCH"
+    },
+    {
+      "type": "colors",
+      "key": " 󰏘 COLORS"
+    },
+    {
+      "type": "logo",
+      "key": " 󰕵 LOGO"
+    },
+    {
+      "type": "datetime",
+      "key": " 󰃰 DATETIME"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "├────────────────────── CUSTOM SCRIPTS ─────────────────────┤"
+    },
+    "break",
+    {
+      "type": "command",
+      "key": " 󰆍 CUSTOM",
+      "text": "echo 'Add your custom scripts here'"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "└─────────────────────────────────────────────────────────────┘"
+    },
+    "break"
   ]
 }
