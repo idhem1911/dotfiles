@@ -6,6 +6,6 @@ uniform sampler2D tex;
 
 void main() {
     vec4 pixColor = texture(tex, v_texcoord);
-    pixColor.rgb *= vec3(1.0, 0.854546, 0.636364);
+    pixColor.rgb *= vec3(1.0, 0.963636, 0.909091);
     fragColor = pixColor;
 }

@@ -1,48 +1,40 @@
 {
   // [SYSTEM] Do not touch. Validates the file structure.
   "$schema": "/etc/xdg/swaync/configSchema.json",
-
   // [POSITION] Where the popups and control center spawn.
   // Change to "left" or "bottom" if you move Waybar.
   "positionX": "right",
   "positionY": "top",
-
   // [LAYERS] Do not touch. "overlay" ensures it floats above fullscreen apps.
   "layer": "overlay",
   "control-center-layer": "overlay",
   "layer-shell": true,
   "cssPriority": "application",
-
   // [MARGINS] Distance from screen edges in pixels.
   // Tweak 'margin-top' if it overlaps your Waybar.
   "control-center-margin-top": 40,
   "control-center-margin-bottom": 10,
   "control-center-margin-right": 10,
   "control-center-margin-left": 0,
-
   // [POPUP MARGINS] Distance for the transient notification popups.
   "notification-margin-top": 10,
   "notification-margin-right": 10,
   "notification-margin-bottom": 0,
   "notification-margin-left": 0,
-
   // [SIZING] Image and window dimensions. Tweak if icons look too big/small.
   "notification-icon-size": 20,
   "notification-body-image-height": 100,
   "notification-body-image-width": 200,
-
   // [TIMEOUTS] How long popups stay on screen (in seconds).
   // 0 = stays until clicked. Tweak to your preference.
   "timeout": 3,
   "timeout-low": 3,
   "timeout-critical": 0,
-
   // [DIMENSIONS] Control center panel size. Tweak if text gets cut off.
   "fit-to-screen": true,
   "control-center-width": 400,
   "control-center-height": 600,
   "notification-window-width": 350,
-
   // [BEHAVIOR] Do not touch unless disabling shortcuts.
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
@@ -50,11 +42,13 @@
   "hide-on-clear": false,
   "hide-on-action": true,
   "script-fail-notify": true,
-
   // [WIDGETS] The modules loaded in the control center.
   // Add "buttons-grid" or "volume" here if you want more controls later.
-  "widgets": ["title", "dnd", "notifications"],
-
+  "widgets": [
+    "title",
+    "dnd",
+    "notifications"
+  ],
   // [WIDGET CONFIG] Text and settings for the widgets above.
   "widget-config": {
     "title": {

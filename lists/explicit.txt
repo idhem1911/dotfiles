@@ -80,6 +80,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 python-pip
+qbittorrent
 qt5-wayland
 qt5ct
 qt6-wayland
