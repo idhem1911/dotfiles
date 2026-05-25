@@ -18,6 +18,7 @@ cliphist
 corectrl
 ddcutil
 dkms
+dosfstools
 efibootmgr
 exfatprogs
 fastfetch
